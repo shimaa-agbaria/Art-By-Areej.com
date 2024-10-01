@@ -260,24 +260,15 @@
             border-radius: 5px;
         }
 
-      /* شريط تمرير الآراء */
-.review-slider .review {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    color: #99673e;
-}
-
-
+        /* شريط تمرير الآراء */
         .review-slider .review {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 20px;
-                }
+            color: #99673e;
+        }
 
         .review-slider .rating {
             margin: 10px 0;
@@ -287,20 +278,19 @@
             font-size: 24px;
             color: gold;
         }
+
         .customer-reviews-title {
-    text-align: center;
-    font-size: 30px; /* حجم الخط أكبر */
-    color: #99673e;
-    margin-bottom: 30px;
-    font-weight: bold;
-}
+            text-align: center;
+            font-size: 30px; /* حجم الخط أكبر */
+            color: #99673e;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
 
-
-
-.review-slider .review p {
-    font-size: 22px; /* تكبير حجم خط المراجعات */
-    color: #99673e; /* لون بني للمراجعات */
-}
+        .review-slider .review p {
+            font-size: 22px; /* تكبير حجم خط المراجعات */
+            color: #99673e; /* لون بني للمراجعات */
+        }
 
         .slick-slide {
             display: flex !important;
@@ -310,137 +300,87 @@
         .slick-dots {
             bottom: 10px;
         }
+
         /* حركة القلوب */
-@keyframes floatUp {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-30px); /* تتحرك للأعلى */
-        opacity: 0; /* تصبح غير مرئية بالتدريج */
-    }
-}
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
 
-.heart {
-    display: inline-block;
-    font-size: 24px;
-    color: gold;
-    animation: floatUp 2s ease-in-out infinite;
-    margin-right: 5px; /* مسافة صغيرة بين القلوب */
-}
+            100% {
+                transform: translateY(-30px); /* تتحرك للأعلى */
+                opacity: 0; /* تصبح غير مرئية بالتدريج */
+            }
+        }
 
-/* إضافة التأخير لكل قلب لجعل الحركة غير متزامنة */
-.heart:nth-child(1) {
-    animation-delay: 0s;
-}
-.heart:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.heart:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.heart:nth-child(4) {
-    animation-delay: 0.6s;
-}
-.heart:nth-child(5) {
-    animation-delay: 0.8s;
-}
-.section-separator { /*خط يفصل بين المنتج واراء الزبائن*/
-    border: none;
-    height: 2px;
-    background-color: #99673e; /* لون بني مماثل لتنسيق الموقع */
-    width: 80%;
-    margin: 30px auto; /* محاذاة إلى المنتصف وإضافة مسافة */
-}
-
+        .heart {
+            display: inline-block;
+            font-size: 24px;
+            color: gold;
+            animation: floatUp 2s ease-in-out infinite;
+            margin-right: 5px; /* مسافة صغيرة بين القلوب */
+        }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 </head>
 
 <body>
+    <header>
+        <h1>مرحبا بكم في موقعنا!</h1>
+    </header>
     <div class="hero-image">
         <img src="البدايه1.jpg" alt="صورة مقدمة">
     </div>
-
-    <header>
-        <div class="nav">
-            <a href="page1.html">الصفحة الرئيسية</a>
-            <a href="page2.html">كتالوج</a>
-            <a href="page3.html">كتالوج المنتجات الأخرى</a>
-        </div>
-    </header>
-
-    <div class="welcome">
-        مَتْجَري المُتَميِّزُ يُرحِّبُ بِزُوّارِه
+    <div class="welcome">أهلاً بكم في متجرنا!</div>
+    <div class="nav">
+        <a href="#products">المنتجات</a>
+        <a href="#order">اطلب الآن</a>
+        <a href="#contact">تواصل معنا</a>
     </div>
-
-    <div class="product-container">
+    <div class="product-container" id="products">
+        <h2>المنتجات</h2>
         <div class="circle-images">
-            <a href="page2.html" title="عرض الكتالوج 1">
-                <img src="صوره لكتالوج البراويز.jpg" alt="كتالوج 1">
+            <a href="https://via.placeholder.com/250">
+                <img src="صوره لكتالوج البراويز.jpg" alt="كتالوج براويز" class="product-image">
             </a>
-            <a href="page3.html" title="عرض الكتالوج 2">
-                <img src="اريج2.jpg" alt="كتالوج 2">
+            <a href="https://via.placeholder.com/250">
+                <img src="اريج2.jpg" alt="اريج 2" class="product-image">
             </a>
-        </div>
-
-        <div class="product-box">
-            <div class="product-image-container">
-                <img src="صندوق واخيرا تجمعنا.jpg" alt="صندوق وأخيرًا تجمّعنا" class="product-image">
-            </div>
-            <div class="order-button-container">
-                <button class="show-order-form" onclick="toggleOrderForm()">أطلب الآن</button>
-            </div>
-            <div class="order-form" id="orderForm">
-                <p id="productDescription">صندوق وأخيرًا تجمّعنا.</p>
-                
-                <h3>يشمل 8 العاب</h3>
-                <p id="productPrice">السعر: 220</p>
-            
-                <label for="name">الاسم:</label>
-                <input type="text" id="name" required>
-                
-                <label for="phone">رقم الهاتف:</label>
-                <input type="tel" id="phone" required>
-                
-                <label for="additionalNumber">رقم إضافي:</label>
-                <input type="tel" id="additionalNumber">
-                
-                <label for="deliveryOption">اختر طريقة التوصيل:</label>
-                <select id="deliveryOption" onchange="toggleDeliveryDetails()" required>
-                    <option value="" disabled selected>اختر طريقة التوصيل</option>
-                    <option value="delivery">توصيل</option>
-                    <option value="pickup">استلام شخصي</option>
-                </select>
-                
-                <div id="deliveryDetails" style="display: none;">
-                    <label for="deliveryArea">اختر المنطقة:</label>
-                    <select id="deliveryArea">
-                        <option value="north">الشمال - 50₪</option>
-                        <option value="south">الجنوب - 60₪</option>
-                        <option value="triangle">المثلث - 40₪</option>
-                    </select>
-                    <label for="region">اسم المنطقة:</label>
-                    <input type="text" id="region">
-                </div>
-                
-                <button class="submit-button" onclick="sendWhatsApp()">إرسال الطلب</button>
-            </div>
-            
+            <a href="https://via.placeholder.com/250">
+                <img src="صندوق واخيرا تجمعنا.jpg" alt="صندوق تجمعنا" class="product-image">
+            </a>
         </div>
     </div>
-    <hr class="section-separator">
-    <div class="customer-reviews-section">
-        <h2 class="customer-reviews-title">"آرَاءُ زَبَائِنِي تَعْكِسُ جَوْدَةَ مُنْتَجَاتِي وَتَمَيُّزِي.
-             أَسْعَدُ دَائِمًا بِمُلَاحَظَاتِكُمْ 
-             لِأَنَّهَا تُسَاعِدُنِي عَلَى تَقْدِيمِ الْأَفْضَلِ لَكُمْ!" مَتْجَرُ الأَرِيجِ الْمُتمَيَّزِ.
-            
-            </h2>
+    <div class="order-form" id="order">
+        <h2>نموذج الطلب</h2>
+        <input type="text" placeholder="الاسم الكامل" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <textarea placeholder="ملاحظات إضافية"></textarea>
+        <div class="order-button-container">
+            <button class="show-order-form">عرض نموذج الطلب</button>
+        </div>
+        <div class="order-form" id="order-form">
+            <button class="submit-button">إرسال الطلب</button>
+        </div>
+    </div>
+    <div class="highlight-box">
+        <p>تسوق الآن واحصل على خصم خاص!</p>
+    </div>
+    <div class="social-media">
+        <h3>تابعنا على وسائل التواصل الاجتماعي!</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="policy">
+        <h2>سياسة الطلب</h2>
+        <p>يتم معالجة الطلبات خلال 3 أيام عمل.</p>
+    </div>
+    <div class="customer-reviews">
+        <h2 class="customer-reviews-title">آراء العملاء</h2>
         <div class="review-slider">
             <div class="review">
-                <p>عنجد كان اختيار موفق واكثر من رائع انو روان دلتني على هيك صبيه لان المعامله اهم من الشغل نفسو ولله❤❤</p>
+                <p>منتج ممتاز! أنصح به.</p>
                 <div class="rating">
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
@@ -450,1149 +390,23 @@
                 </div>
             </div>
             <div class="review">
-<P>يعطيكي العافيه حبيبتي هسا تا فضيت اكتبلك
-    يسلم ايديكي عنجد بجنن🫶🏻 كثير كثير حلوات اول مره بتعامل معك بس مش اخر مره</P>                <div class="rating">
+                <p>خدمة العملاء رائعة، شكراً لكم!</p>
+                <div class="rating">
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                 </div>
-                </div>
-
-                <div class="review">
-                    <p>"حبيبتي ، طلبت من عندك قبل المره رسمه لصحبيتي وعنجد كانت ككثير ككثييرر بتسطللل كل مره بطلب بتبهريني بجمال شغلك😍😍"</p>
-                    <div class="rating">
-                        <span class="heart">❤️</span>
-                        <span class="heart">❤️</span>
-                        <span class="heart">❤️</span>
-                        <span class="heart">❤️</span>
-                        <span class="heart">❤️</span>
-                    </div>
-                </div>
+            </div>
         </div>
     </div>
-    
-
-    <div class="social-media">
-        <a href="https://www.instagram.com/art._.by_areej?igsh=YWd3N3FtcTdiNWYz" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/972535845120" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
-    </div>
-
-    <div class="policy">
-        <h2>سياسة الطلب وعدم إلغاء الطلبيات بعد تجهيزها </h2>
-        <p>⚠️ **تنبيه هام**: لا يمكن إلغاء الطّلبيّات بعد تأكيدها. نشكركم لتفهّمكم ونتطلّع لخدمتكم بكلّ سرور.</p>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.review-slider').slick({
-                autoplay: true,
-                arrows: false,
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            });
+        document.querySelector('.show-order-form').addEventListener('click', function () {
+            const orderForm = document.getElementById('order-form');
+            orderForm.style.display = orderForm.style.display === 'block' ? 'none' : 'block';
         });
-
-        function toggleDeliveryDetails() {
-            const deliveryOption = document.getElementById('deliveryOption').value;
-            const deliveryDetails = document.getElementById('deliveryDetails');
-            deliveryDetails.style.display = (deliveryOption === 'delivery') ? 'block' : 'none';
-        }
-
-        function toggleOrderForm() {
-            const orderForm = document.getElementById('orderForm');
-            orderForm.style.display = orderForm.style.display === 'none' || orderForm.style.display === '' ? 'block' : 'none';
-        }
-
-        function sendWhatsApp() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const additionalNumber = document.getElementById('additionalNumber').value;
-            const deliveryOption = document.getElementById('deliveryOption').value;
-            const deliveryArea = document.getElementById('deliveryArea') ? document.getElementById('deliveryArea').value : 'غير محدد';
-            const region = document.getElementById('region').value || 'غير محدد';
-
-            const message = `طلب جديد%0Aالاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aرقم إضافي: ${additionalNumber}%0Aطريقة التوصيل: ${deliveryOption}%0Aمنطقة التوصيل: ${deliveryArea}%0Aاسم المنطقة: ${region}`;
-            const phoneNumber = '972535845120'; // استبدل برقم هاتفك الفعلي
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-            window.location.href = whatsappUrl;
-        }
     </script>
-    <footer style="background-color: #fffefd; padding: 20px; text-align: center; color: #99673e;">
-        <p>© 2024 جميع الحقوق محفوظة - Art By Areej </p>
-        <p>تم تصميم وتطوير الموقع بواسطة</p>
-        <P>Design.2023D</P>
-    </footer>
-    
 </body>
 
 </html>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كتالوج المنتجات</title>
-    <style>
-      /* تعيين أنماط الجسم العامة */
-      body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #ffffff;
-    color: #6f431e;
-    margin: 0;
-    padding: 0;
-}
-
-/* أنماط الترويسة (Header) */
-header {
-    background-color: #ffffff; /* لون ترابي فاتح */
-    text-align: center;
-    border-bottom: 2px solid #eccdb1; /* إطار بني داكن أسفل الشعار */
-    padding: 20px 0; /* إضافة مساحة فوق وتحت الشعار */
-}
-
-/* أنماط الشعار (Logo) */
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #eccdb1; /* لون بني داكن */
-}
-
-/* أنماط مستطيل الترحيب */
-.welcome-message {
-    background-color: #ffdbbe; /* لون يتماشى مع الصفحة */
-    padding: 15px;
-    border-radius: 5px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
-    font-size: 18px;
-    color: #6b4f3b; /* لون بني داكن */
-}
-.welcome{
-    padding: 15px;
-    border-radius: 5px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
-    font-size: 18px;
-    color: #6b4f3b; /* لون بني داكن */
-}
-
-/* أنماط شريط التنقل (Navigation) */
-.nav {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-.nav a {
-    text-decoration: none;
-    color: #6b4f3b; /* لون بني داكن */
-    margin: 0 15px;
-    font-weight: bold;
-}
-.nav a:hover {
-    text-decoration: underline;
-}
-
-/* أنماط الحاوية (Container) */
-.container {
-    width: 80%;
-    margin: auto;
-}
-
-/* أنماط الكتالوج (Catalog) */
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* أنماط المنتجات (Product) */
-.product {
-    background-color: #ffdbbec0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex: 1 1 calc(33.333% - 40px);
-    text-align: center;
-    border: 1px solid #eccdb1; /* إطار بلون بني داكن */
-}
-.product img {
-    width: 50%;
-    height: auto;
-    border: 5px solid #eccdb1; /* إطار بلون ترابي فاتح */
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
-}
-.product h3 {
-    margin: 10px 0 5px;
-}
-.product p {
-    margin: 5px 0;
-    font-weight: bold;
-    color: #6b4f3b; /* لون بني داكن */
-    font-size: 16px; /* حجم الخط القياسي */
-}
-.product button {
-    padding: 10px 20px;
-    background-color: #6b4f3b; /* لون بني أغمق */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-.product button:hover {
-    background-color: #6b4f3b; /* لون بني داكن */
-}
-
-/* أنماط الأسعار (Prices) */
-.old-price {
-    text-decoration: line-through;
-    color: #e74c3c; /* لون أحمر للسعر القديم */
-    margin-right: 10px;
-    font-size: 14px; /* حجم خط أصغر للسعر القديم */
-}
-.new-price {
-    color: #27ae60; /* لون أخضر للسعر الجديد */
-    font-size: 18px; /* حجم خط أكبر للسعر الجديد لجعله بارزاً */
-    font-weight: bold;
-}
-
-/* أنماط السلة (Cart) */
-.cart {
-    padding: 20px;
-    background-color: #eccdb1; /* لون ترابي فاتح */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgb(198, 122, 122);
-    margin: 20px auto; /* مركز السلة */
-    border: 1px solid #ffffff; /* إطار بلون بني داكن */
-    max-width: 600px; /* عرض أقصى للسلة */
-    text-align: center; /* محاذاة النص في الوسط */
-}
-.cart h2 {
-    margin: 0;
-    padding-bottom: 10px;
-    color: #6b4f3b; /* لون بني داكن */
-    font-size: 24px; /* حجم خط أكبر */
-    font-weight: bold; /* خط عريض */
-}
-.cart ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; /* محاذاة النصوص إلى اليسار */
-    display: inline-block; /* جعل القائمة تظهر في وسط الصفحة */
-}
-.cart ul li {
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.remove-button {
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.remove-button:hover {
-    background-color: #c0392b;
-}
-
-/* أنماط نموذج الاتصال (Contact Form) */
-.contact-form {
-    max-width: 600px;
-    margin: auto;
-    display: none;
-    background-color: #ffdbbec0; /* لون ترابي فاتح */
-    border-radius: 8px;
-    padding: 20px;
-    border: 1px solid #6c3200; /* إطار بلون بني داكن */
-}
-.contact-form label {
-    display: block;
-    margin-top: 10px;
-    color: #6c3200; /* لون بني داكن */
-}
-.contact-form input, 
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #7d6b5b; /* لون بني داكن */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.contact-form button:hover {
-    background-color: #6b4f3b; /* لون بني أغمق */
-}
-
-/* أنماط التذييل (Footer) */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #fffff6b4f3bf; /* لون ترابي فاتح */
-}
-
-    </style>
-</head>
-<body>
-    <header>
-        <img src="logo areej.jpg" alt="لوجو الموقع" class="logo">
-        <div class="welcome-message">
-            إجْعَلوا  جُدْرانَ بيوتِكُمْ وَزَواياهُ تَتَأَلَّقُ بِمَزيجٍ خاصٍّ مِنْ صُوَرِكُمْ وَلَمَساتِ الأريجِ المُتَمَيِّزَةِ        </div>
-       
-        <div class="nav">
-            <a href="page1.html">الصفحة الرئيسية</a>
-            <a href="page2.html">كتالوج البراويز</a>
-            <a href="page3.html">كتالوج المنتجات الاخرى</a>
-                </div>
-    </header>
-    <div class="welcome">
-        "مُلاحَظّة:الْبِرْوَازُ هَدِيَّةٌ عَلَى الرَّسْمَةِ/التَّصْمِيمِ"
-
-</div>
-
-<!-- كتالوج المنتجات -->
-<div class="container">
-    <div class="catalog">
-        <div class="product">
-            <img src=" حملة الاريج.jpg" alt="بوكس رسم ديچتال - رصاصي">
-            <h3> بوكس رسم ديچتال - رصاصي  </h3>
-            <p>
-                <span class="old-price">230₪</span> <span class="new-price">180₪</span>
-            </p>
-            <button onclick="addToCart('بوكس رسم ديچتال - رصاصي')">أضف إلى السلة</button>
-        </div>
-        
-        <div class="product">
-            <img src=" حملة الاريج رسم ملون.jpg" alt=" بوكس رسم ديچتال - ملوّن">
-            <h3>بوكس رسم ديچتال - ملوّن </h3>
-                <span class="old-price">230₪</span> <span class="new-price">180₪</span>
-            </p>
-            <button onclick="addToCart('  بوكس رسم ديچتال - ملوّن ')">أضف إلى السلة</button>
-        </div> 
-
-
-        <div class="product">
-            <img src=" برواز ومجين.jpg " alt="برواز ديجتال رصاصي A4 ">
-            <h3>رسمة ديجتال رصاصي + كفر/مجين تلفون</h3>
-            <P>A4 حجم</P>
-                <span class="old-price">180₪</span> <span class="new-price">150₪</span>
-            </p>
-            <button onclick="addToCart(' برواز + كڤر تلفون رسمة ديجتال -  رصاصي حجم A4')">أضف إلى السلة</button>
-        </div> 
-
-        <div class="product">
-            <img src=" رسم ديجتال مع كفر a3.jpg " alt=" برواز + كڤر تلفون رسمة ديجتال - رصاصي حجم A3">
-            <h3>رسمة ديجتال رصاصي + كفر/مجين تلفون</h3>
-           <P>A3 حجم</P>
-            <span class="old-price">200₪</span> <span class="new-price">170₪</span>
-            </p>
-            <button onclick="addToCart('برواز + كڤر تلفون رسمة ديجتال -  رصاصي حجم A3  ')">أضف إلى السلة</button>
-        </div>
-
-        <div class="product">
-            <img src="ديجتال رصاصي.jpg" alt="رسمة ديچتال - رصاصي حجم A4 ">
-            <h3>رسمة ديچتال - رصاصي </h3>
-            <p> حجم A4 : 80₪</p>
-            <button onclick="addToCart('برواز ديجتال رصاصي حجم A4')">أضف إلى السلة</button>
-        </div>
-
-        <div class="product">
-            <img src="رسم رضاصي2.jpg" alt="رسم ديجتال - رصاصي حجم A3 ">
-            <h3>رسم ديجتال - رصاصي  </h3>
-            <p> حجم A3 : 100₪</p>
-            <button onclick="addToCart('رسم ديجتال - رصاصي حجم A3')">أضف إلى السلة</button>
-        </div>
-
-
-        <div class="product">
-            <img src="ديجتال ملون.jpg" alt=" رسم ديجتال - ملوّن حجم A4">
-            <h3>رسم ديجتال - ملوّن </h3>
-            <p> حجم A4 : 80₪</p>
-            <button onclick="addToCart('رسم ديجتال - ملوّن حجم A4')">أضف إلى السلة</button>
-        </div>
-
-            <div class="product">
-                <img src="رسم ملون2.jpg" alt="رسم ديجتال - ملوّن حجم A3 ">
-                <h3> رسم ديجتال - ملوّن </h3>
-                <p> حجم A3 : 100₪</p>
-                <button onclick="addToCart('رسم ديجتال - ملوّن حجم A3')">أضف إلى السلة</button>
-            </div>
-        <div class="product">
-            <img src="دمج صور ديجتال ملون.jpg" alt=" دمج صور برسمة ديچتال - ملون حجم A4">
-            <h3> دمج صور برسمة ديچتال - ملون  </h3>
-            <p> حجم A3 : 120₪</p>
-            <p> حجم A4 : 100₪</p>
-            <button onclick="addToCart(' دمج صور برسمة ديچتال - ملون حجم A4 ')">أضف إلى السلة</button>
-        </div>
-        <div class="product">
-            <img src="دمج صور ديجتال رصاصي.jpg" alt="برواز ديجتال رصاصي A3 ">
-            <h3>  دمج صور برسمة ديچتال - رصاصي </h3>
-            <p> حجم A3 : 120₪</p>
-            <p> حجم A4 : 100₪</p>
-            <button onclick="addToCart('دمج صور ديجتال رصاصي')">أضف إلى السلة</button>
-        </div>
-        <div class="product">
-            <img src="تصميم صوره باركودa3.jpg" alt="تصميم صورة بباركود اغنية ">
-            <h3>تصميم صورة بباركود اغنية   </h3>
-            <p>  حجم A3  </p>
-            <P>60₪</P>
-             <button onclick="addToCart('تصميم صورة بباركود اغنية')">أضف إلى السلة</button>
-            </div>
-            <div class="product">
-                <img src="تصميم صوره باركودa4.jpg" alt=" تصميم المولود - حجم A4">
-                <h3>تصميم صورة بباركود اغنية </h3>
-                <p> حجم A4 </p>
-                <P>50₪ </P>
-                 <button onclick="addToCart('  تصميم صورة بباركود اغنيه')">أضف إلى السلة</button>
-                </div>
-        <div class="product">
-            <img src="تصميم للبيبي.jpg" alt=" تصميم المولود - حجم A4">
-            <h3>تصميم المولود  </h3>
-            <p> حجم A4 : 80₪ </p>
-             <button onclick="addToCart(' تصميم المولود - حجم A4')">أضف إلى السلة</button>
-            </div>
-
-            <div class="product">
-                <img src="تصميم للبيبي2.jpg" alt="تصميم المولد - حجم A3">
-                <h3>تصميم المولد  </h3>
-                <p> حجم A3 : 100₪</p>
-                 <button onclick="addToCart('تصميم المولد - حجم A3 ')">أضف إلى السلة</button>
-                </div>
-
-                <div class="product">
-                    <img src=" تصميم صور 2.jpg" alt="  تصميم الرَقم/العُمر- حجم A3  ">
-                    <h3>تصميم الرَقم/العُمر  </h3>
-                    <p> حجم A3 : 120₪</p>
-                    <button onclick="addToCart('   تصميم الرَقم/العُمر- حجم A3')">أضف إلى السلة</button>
-                </div>
-
-                <div class="product">
-                    <img src="تصميم الرقم 2.jpg" alt="تصميم الرَقم/العُمر- حجم A4 ">
-                    <h3>تصميم الرَقم/العُمر </h3>
-                    <p> حجم A4 : 100₪</p>
-                    <button onclick="addToCart('  تصميم الرَقم/العُمر- حجم A4')">أضف إلى السلة</button>
-                </div>
-
-
-        <div class="product">
-            <img src="تصميم صور.jpg " alt="برواز ديجتال رصاصي A3 ">
-            <h3> تصميم فكرة الأريج باضافة رسمة ديجتال </h3>
-            <p> حجم A3 : 140₪</p>
-            <p> حجم A4 : 120₪</p>
-            <button onclick="addToCart('   تصميم فكرة الأريج باضافة رسمة ديجتال ')">أضف إلى السلة</button>
-        </div>
-        
-        <div class="product">
-            <img src="تصميم صور 3.jpg" alt="برواز ديجتال رصاصي  ">
-            <h3>تصميم فكرة الأريج 1 </h3>
-            <p> حجم A3 : 120₪</p>
-            <p> حجم A4 : 100₪</p>
-            <button onclick="addToCart( 'تصميم فكرة الأريج - حجم ' )">أضف إلى السلة</button>
-        </div>
-        <div class="product">
-            <img src="تصمم صور4.jpg" alt="برواز ديجتال رصاصي A3 ">
-            <h3>تصميم  فكرة الأريج 2</h3>
-            <p> حجم A3 : 120₪</p>
-            <p> حجم A4 : 100₪</p>
-            <button onclick="addToCart('تصميم فكرة الأريج 2')">أضف إلى السلة</button>
-        </div>
-        <div class="product">
-            <img src="تصميم صور5.jpg" alt="برواز ديجتال رصاصي A3 ">
-            <h3>تصميم فكرة الأريج 3</h3>
-            <p> حجم A3 : 120₪</p>
-            <p> حجم A4 : 100₪</p>
-            <button onclick="addToCart('   تصميم فكرة الأريج3 ')">أضف إلى السلة</button>
-        </div>
-        
-        
-        </div>     
-       </div>
-       <div class="cart">
-        <h2>سلة الطلبيات</h2>
-        <ul id="cartItems">
-            <!-- سيتم تحديث هذه القائمة بواسطة JavaScript -->
-        </ul>
-        <button onclick="showOrderForm()">انتقل إلى تأكيد طلبك</button>
-<p>"بَعْدَ إِتْمَامِ الطَّلَبِ وَإِرْسَالِهِ، يُرْجَى بَعْثُ الصُّورِ الْمَطْلُوبَةِ لِلْتَّصْمِيمِ عَبْرَ الْوَاتْسَابِ."</p>
-    </div>
-    
-<!-- نموذج الطلب -->
-<div id="orderForm" class="contact-form">
-    <h1>أرسل طلبك عبر الواتس آب</h1>
-    <form id="form">
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="phone">رقم الهاتف:</label>
-        <input type="tel" id="phone" name="phone" required>
-        
-        
-        <label for="additionalNumber">رقم إضافي:</label>
-        <input type="tel" id="additionalNumber" name="additionalNumber">
-        
-        <label for="deliveryOption">اختر طريقة التوصيل:</label>
-        <select id="deliveryOption" name="deliveryOption" onchange="toggleDeliveryDetails()" required>
-            <option value="" disabled selected>اختر طريقة التوصيل</option>
-            <option value="delivery">توصيل(يستغرق وقت تحضير الطلبيه وتوصيلها حتى 5 ايام)</option>
-            <option value="استلام شخصي">استلام شخصي(للستلام الشخصي يتم تجهيز الطلبيه حتى 2 ايام تحضير)</option>
-        </select>
-               <!-- الحقول الجديدة -->
-<label for="messageOrSong">اذا كنت ترغب باضافة اغنيه او عباره: <label>
-    <textarea id="messageOrSong" name="messageOrSong" rows="3" placeholder="اكتب العبارة أو الأغنية هنا"></textarea>
-    
-    <label for="specificDate">تاريخ/يوم معين لأستلام الطلبيه</label>
-    <input type="date" id="specificDate" name="specificDate">
-        <div id="deliveryDetails" style="display: none;">
-            <label for="deliveryArea">اختر المنطقة:</label>
-            <select id="deliveryArea" name="deliveryArea">
-                <option value="north">الشمال - 50</option>
-                <option value="south">الجنوب - 60</option>
-                <option value="triangle">المثلث - 40</option>
-            </select>
-            
-            <label for="region">اسم المنطقة:</label>
-            <input type="text" id="region" name="region">
-        </div>
-        
-        <label for="size">حجم البرواز:</label>
-        <select id="size" name="size" required>
-            <option value="" disabled selected>اختر حجم البرواز</option>
-            <option value="A4">حجم A4</option>
-            <option value="A3">حجم A3</option>
-        </select>
-
-        <label for="phoneType">نوع الهاتف:</label>
-        <select id="phoneType" name="phoneType" required>
-            <option value="" disabled selected>اختر نوع الهاتف (اذا كان لديك طلب لكفر هاتف)</option>     
-            <option value="لا يوجد">لا يوجد</option>
-             <option value="iPhone">iphone 11</option>
-            <option value="iPhone">iphone 11 pro</option>
-            <option value="iPhone">iphone 11 promax</option>
-            <option value="iPhone">iphone 12</option>
-            <option value="iPhone">iphone 12 pro</option>
-            <option value="iPhone">iphone 12 promax</option>
-            <option value="iPhone">iphone 13</option>
-            <option value="iPhone">iphone 13 pro</option>
-            <option value="iPhone">iphone 13 promax</option>
-            <option value="iPhone">iphone 14</option>
-            <option value="iPhone">iphone 14 pro</option>
-            <option value="iPhone">iphone 14 promax</option>
-            <option value="iPhone">iphone 14 blus </option>
-            <option value="iPhone">iphone 15</option>
-            <option value="iPhone">iphone 15 pro</option>
-            <option value="iPhone">iphone 15 promax</option>
-
-
-            <option value="Samsung">21 ultra</option>
-            <option value="Samsung">22 ultra</option>
-            <option value="Samsung">23 ultra</option>
-
-            <option value="Samsung">A52</option>
-            <option value="Samsung">A53</option>
-            <option value="Samsung">A71</option>
-            <option value="Samsung">A73</option>
-
-
-        </select>
-
-        <label for="cartDetails">المنتجات في السلة:</label>
-        <textarea id="cartDetails" name="cartDetails" rows="6" readonly></textarea>
-        
-
-        <button type="submit">إرسال الطلب</button>
-    </form>
-</div>
-
-
-<footer style="background-color: #fffefd; padding: 20px; text-align: center; color: rgb(0, 0, 0);">
-    <p>© 2024 جميع الحقوق محفوظة - Art By Areej </p>
-    <p>تم تصميم وتطوير الموقع بواسطة</p>
-    <P>Design.2023D</P>
-</footer>
-
-    <script>
-        let cart = [];
-    
-        // إضافة منتج إلى السلة
-        function addToCart(productName) {
-            // إضافة المنتج إلى السلة
-            cart.push(productName);
-            updateCartDisplay();
-            alert(`${productName} تم إضافته إلى السلة.`);
-        }
-    
-        // تحديث عرض السلة
-        function updateCartDisplay() {
-            const cartItems = document.getElementById('cartItems');
-            cartItems.innerHTML = '';
-            cart.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.textContent = item;
-    
-                // إنشاء زر إزالة
-                const removeButton = document.createElement('button');
-                removeButton.textContent = 'إزالة';
-                removeButton.className = 'remove-button';
-                removeButton.onclick = function() {
-                    removeFromCart(index);
-                };
-    
-                // إضافة العناصر إلى القائمة
-                li.appendChild(removeButton);
-                cartItems.appendChild(li);
-            });
-        }
-    
-        // إزالة منتج من السلة
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartDisplay();
-        }
-    
-        // عرض نموذج الطلب
-        function showOrderForm() {
-            document.getElementById('orderForm').style.display = 'block';
-            document.getElementById('cartDetails').value = cart.join('\n');
-        }
-    
-        // إظهار/إخفاء تفاصيل التوصيل
-        function toggleDeliveryDetails() {
-            const deliveryOption = document.getElementById('deliveryOption').value;
-            const deliveryDetails = document.getElementById('deliveryDetails');
-            deliveryDetails.style.display = (deliveryOption === 'delivery') ? 'block' : 'none';
-        }
-     // إرسال الطلب عبر الواتس آب
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
-    var phoneType = document.getElementById('phoneType').value || 'غير محدد';
-    var additionalNumber = document.getElementById('additionalNumber').value;
-    var deliveryOption = document.getElementById('deliveryOption').value;
-    var deliveryArea = document.getElementById('deliveryArea').value || 'غير محدد';
-    var region = document.getElementById('region').value || 'غير محدد';
-    var cartItems = cart.join(', ');
-    
-    // الحقول الجديدة
-    var messageOrSong = document.getElementById('messageOrSong').value || 'لا يوجد';
-    var specificDate = document.getElementById('specificDate').value || 'غير محدد';
-
-    var message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aنوع الهاتف: ${phoneType}%0Aرقم إضافي: ${additionalNumber}%0Aطريقة التوصيل: ${deliveryOption}%0Aمنطقة التوصيل: ${deliveryArea}%0Aاسم المنطقة: ${region}%0Aالمنتجات: ${cartItems}%0Aالعبارة أو الأغنية: ${messageOrSong}%0Aالتاريخ المطلوب: ${specificDate}`;
-    var phoneNumber = '972535845120'; // استبدل برقم هاتفك الفعلي
-    var whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
-    window.location.href = whatsappUrl;
-});
-
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كتالوج المنتجات</title>
-    <style>
-      /* تعيين أنماط الجسم العامة */
-      body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #ffffff;
-    color: #6f431e;
-    margin: 0;
-    padding: 0;
-}
-
-/* أنماط الترويسة (Header) */
-header {
-    background-color: #ffffff; /* لون ترابي فاتح */
-    text-align: center;
-    border-bottom: 2px solid #eccdb1; /* إطار بني داكن أسفل الشعار */
-    padding: 20px 0; /* إضافة مساحة فوق وتحت الشعار */
-}
-
-/* أنماط الشعار (Logo) */
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #eccdb1; /* لون بني داكن */
-}
-
-/* أنماط مستطيل الترحيب */
-.welcome-message {
-    background-color: #ffdbbe; /* لون يتماشى مع الصفحة */
-    padding: 15px;
-    border-radius: 5px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
-    font-size: 18px;
-    color: #6b4f3b; /* لون بني داكن */
-}
-.welcome{
-    padding: 15px;
-    border-radius: 5px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
-    font-size: 18px;
-    color: #6b4f3b; /* لون بني داكن */
-}
-
-/* أنماط شريط التنقل (Navigation) */
-.nav {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-.nav a {
-    text-decoration: none;
-    color: #6b4f3b; /* لون بني داكن */
-    margin: 0 15px;
-    font-weight: bold;
-}
-.nav a:hover {
-    text-decoration: underline;
-}
-
-/* أنماط الحاوية (Container) */
-.container {
-    width: 80%;
-    margin: auto;
-}
-
-/* أنماط الكتالوج (Catalog) */
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* أنماط المنتجات (Product) */
-.product {
-    background-color: #ffdbbec0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex: 1 1 calc(33.333% - 40px);
-    text-align: center;
-    border: 1px solid #eccdb1; /* إطار بلون بني داكن */
-}
-.product img {
-    width: 50%;
-    height: auto;
-    border: 5px solid #eccdb1; /* إطار بلون ترابي فاتح */
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
-}
-.product h3 {
-    margin: 10px 0 5px;
-}
-.product p {
-    margin: 5px 0;
-    font-weight: bold;
-    color: #6b4f3b; /* لون بني داكن */
-    font-size: 16px; /* حجم الخط القياسي */
-}
-.product button {
-    padding: 10px 20px;
-    background-color: #6b4f3b; /* لون بني أغمق */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-.product button:hover {
-    background-color: #6b4f3b; /* لون بني داكن */
-}
-
-/* أنماط الأسعار (Prices) */
-.old-price {
-    text-decoration: line-through;
-    color: #e74c3c; /* لون أحمر للسعر القديم */
-    margin-right: 10px;
-    font-size: 14px; /* حجم خط أصغر للسعر القديم */
-}
-.new-price {
-    color: #27ae60; /* لون أخضر للسعر الجديد */
-    font-size: 18px; /* حجم خط أكبر للسعر الجديد لجعله بارزاً */
-    font-weight: bold;
-}
-
-/* أنماط السلة (Cart) */
-.cart {
-    padding: 20px;
-    background-color: #eccdb1; /* لون ترابي فاتح */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgb(198, 122, 122);
-    margin: 20px auto; /* مركز السلة */
-    border: 1px solid #ffffff; /* إطار بلون بني داكن */
-    max-width: 600px; /* عرض أقصى للسلة */
-    text-align: center; /* محاذاة النص في الوسط */
-}
-.cart h2 {
-    margin: 0;
-    padding-bottom: 10px;
-    color: #6b4f3b; /* لون بني داكن */
-    font-size: 24px; /* حجم خط أكبر */
-    font-weight: bold; /* خط عريض */
-}
-.cart ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; /* محاذاة النصوص إلى اليسار */
-    display: inline-block; /* جعل القائمة تظهر في وسط الصفحة */
-}
-.cart ul li {
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.remove-button {
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.remove-button:hover {
-    background-color: #c0392b;
-}
-
-/* أنماط نموذج الاتصال (Contact Form) */
-.contact-form {
-    max-width: 600px;
-    margin: auto;
-    display: none;
-    background-color: #ffdbbec0; /* لون ترابي فاتح */
-    border-radius: 8px;
-    padding: 20px;
-    border: 1px solid #6c3200; /* إطار بلون بني داكن */
-}
-.contact-form label {
-    display: block;
-    margin-top: 10px;
-    color: #6c3200; /* لون بني داكن */
-}
-.contact-form input, 
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #7d6b5b; /* لون بني داكن */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.contact-form button:hover {
-    background-color: #6b4f3b; /* لون بني أغمق */
-}
-
-/* أنماط التذييل (Footer) */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #fffff6b4f3bf; /* لون ترابي فاتح */
-}
-
-    </style>
-</head>
-<body>
-    <header>
-        <img src="logo areej.jpg" alt="لوجو الموقع" class="logo">
-        <div class="welcome-message">
-            الذّكرَياتُ الجَميلَةُ، هِيَ شَيْءٌ فَوْقَ القَلْبِ وَفَوْقَ المَشاعِرِ، لِذلِكَ دَعْها تُرافِقُكَ بِهَيْئَةِ صورَةٍ في كُلِّ مَكانٍ وَزَمانٍ    </div>
-       
-        <div class="nav">
-            <a href="page1.html">الصفحة الرئيسية</a>
-            <a href="page2.html">كتالوج البراويز</a>
-            <a href="page3.html">كتالوج المنتجات الاخرى</a>
-                </div>
-    </header>
-  
-
-<!-- كتالوج المنتجات -->
-<div class="container">
-    <div class="catalog">
-        <div class="product">
-            <img src="كاسة رسمة ديجتال رصاصي.jpg" alt="كاسةرسمة ديچتال - رصاصي ">
-            <h3> كاسة رسمة ديچتال - رصاصي  </h3>
-            <p>  60₪</p>
-            <button onclick="addToCart('60₪كاسة رسمة ديچتال - رصاصي ')">أضف إلى السلة</button>
-        </div>
-        
-        <div class="product">
-            <img src=" كاسة صوره عاديه.jpg" alt=" كاسة صورة عادية ٣٠₪ ">
-            <h3>كاسة صورة عادية </h3>
-            <p> 30₪</p>
-            </p>
-            <button onclick="addToCart(' كاسة صورة عادية 30₪')">أضف إلى السلة</button>
-        </div> 
-
-
-        <div class="product">
-            <img src=" بازل صوره عاديه.jpg " alt="بازل - puzzle -صورة عادية ٦٠₪">
-            <h3>صورة عادية- puzzle - بازل</h3>
-            <P>60₪</P>
-            </p>
-            <button onclick="addToCart('60₪بازل - puzzle -صورة عادية ')">أضف إلى السلة</button>
-        </div> 
-
-        <div class="product">
-            <img src=" بازل رسمة ديجتال.jpg " alt="رسمة ديجتال - puzzle - بازل ">
-            <h3>رسمة ديجتال - puzzle - بازل</h3>
-           <P> ١٢٠ قطعة </P>
-           <P>80₪</P>     
-           </p>
-            <button onclick="addToCart('رسمة ديجتال - puzzle - بازل')">أضف إلى السلة</button>
-        </div>
-
-        <div class="product">
-            <img src="كفر صوره عاديه.jpg" alt="كڤر/مچين تلفون - صورة عادية ٧٠₪">
-            <h3>كڤر/مچين تلفون - صورة عادية </h3>
-            <p>70₪ </p>
-            <button onclick="addToCart('كڤر /مچين تلفون - صوره عاديه ')">أضف إلى السلة</button>
-        </div>
-
-        <div class="product">
-            <img src="كفر رسم  ديجتال.jpg" alt="كڤر /مچين تلفون - رسم ديچتال ١٠٠₪">
-            <h3>كڤر /مچين تلفون - رسم ديچتال </h3>
-            <p> 100₪</p>
-            <button onclick="addToCart('كڤر /مچين تلفون - رسم ديچتال 100₪')">أضف إلى السلة</button>
-        </div>
-
-
-        <div class="product">
-            <img src="قداحه صوره .jpg" alt=" قداحة صورة/كتابة 80">
-            <h3>قداحة صورة/كتابة </h3>
-            <p>  80₪</p>
-            <button onclick="addToCart('قداحة صورة/كتابة 80₪')">أضف إلى السلة</button>
-        </div>
-
-            <div class="product">
-                <img src="مسبحه صوره عاديه.jpg" alt="مسبحة صورة عادية 50₪">
-                <h3>مسبحة صورة عادية  </h3>
-                <p> 50₪</p>
-                <button onclick="addToCart('مسبحة صورة عادية 50₪')">أضف إلى السلة</button>
-            </div>
-        
-        
-        </div>     
-       </div>
-       <div class="cart">
-        <h2>سلة الطلبيات</h2>
-        <ul id="cartItems">
-            <!-- سيتم تحديث هذه القائمة بواسطة JavaScript -->
-        </ul>
-        <button onclick="showOrderForm()">انتقل إلى تأكيد طلبك</button>
-<p>"بَعْدَ إِتْمَامِ الطَّلَبِ وَإِرْسَالِهِ، يُرْجَى بَعْثُ الصُّورِ الْمَطْلُوبَةِ لِلْتَّصْمِيمِ عَبْرَ الْوَاتْسَابِ."</p>
-    </div>
-    
-<!-- نموذج الطلب -->
-<div id="orderForm" class="contact-form">
-    <h1>أرسل طلبك عبر الواتس آب</h1>
-    <form id="form">
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="phone">رقم الهاتف:</label>
-        <input type="tel" id="phone" name="phone" required>
-        
-        
-        <label for="additionalNumber">رقم إضافي:</label>
-        <input type="tel" id="additionalNumber" name="additionalNumber">
-        
-        <label for="deliveryOption">اختر طريقة التوصيل:</label>
-        <select id="deliveryOption" name="deliveryOption" onchange="toggleDeliveryDetails()" required>
-            <option value="" disabled selected>اختر طريقة التوصيل</option>
-            <option value="delivery">توصيل(يستغرق وقت تحضير الطلبيه وتوصيلها حتى 5 ايام)</option>
-            <option value="استلام شخصي">استلام شخصي(للستلام الشخصي يتم تجهيز الطلبيه حتى 2 ايام تحضير)</option>
-        </select>
-        <!-- الحقول الجديدة -->
-<label for="messageOrSong">اذا كنت ترغب باضافة اغنيه او عباره: <label>
-<textarea id="messageOrSong" name="messageOrSong" rows="3" placeholder="اكتب العبارة أو الأغنية هنا"></textarea>
-
-<label for="specificDate">تاريخ/يوم معين لأستلام الطلبيه</label>
-<input type="date" id="specificDate" name="specificDate">
-
-        <div id="deliveryDetails" style="display: none;">
-            <label for="deliveryArea">اختر المنطقة:</label>
-            <select id="deliveryArea" name="deliveryArea">
-                <option value="north">الشمال - 50</option>
-                <option value="south">الجنوب - 60</option>
-                <option value="triangle">المثلث - 40</option>
-            </select>
-            
-            <label for="region">اسم المنطقة:</label>
-            <input type="text" id="region" name="region">
-        </div>
-        
-    
-
-        <label for="phoneType">نوع الهاتف:</label>
-        <select id="phoneType" name="phoneType" required>
-            <option value="" disabled selected>اختر نوع الهاتف (اذا كان لديك طلب لكفر هاتف)</option>     
-            <option value="لا يوجد">لا يوجد</option>
-             <option value="iPhone">iphone 11</option>
-            <option value="iPhone">iphone 11 pro</option>
-            <option value="iPhone">iphone 11 promax</option>
-            <option value="iPhone">iphone 12</option>
-            <option value="iPhone">iphone 12 pro</option>
-            <option value="iPhone">iphone 12 promax</option>
-            <option value="iPhone">iphone 13</option>
-            <option value="iPhone">iphone 13 pro</option>
-            <option value="iPhone">iphone 13 promax</option>
-            <option value="iPhone">iphone 14</option>
-            <option value="iPhone">iphone 14 pro</option>
-            <option value="iPhone">iphone 14 promax</option>
-            <option value="iPhone">iphone 14 blus </option>
-            <option value="iPhone">iphone 15</option>
-            <option value="iPhone">iphone 15 pro</option>
-            <option value="iPhone">iphone 15 promax</option>
-
-
-            <option value="Samsung">21 ultra</option>
-            <option value="Samsung">22 ultra</option>
-            <option value="Samsung">23 ultra</option>
-
-            <option value="Samsung">A52</option>
-            <option value="Samsung">A53</option>
-            <option value="Samsung">A71</option>
-            <option value="Samsung">A73</option>
-
-
-        </select>
-
-        <label for="cartDetails">المنتجات في السلة:</label>
-        <textarea id="cartDetails" name="cartDetails" rows="6" readonly></textarea>
-        
-
-        <button type="submit">إرسال الطلب</button>
-    </form>
-</div>
-
-<footer style="background-color: #fffefd; padding: 20px; text-align: center; color: rgb(0, 0, 0);">
-    <p>© 2024 جميع الحقوق محفوظة - Art By Areej </p>
-    <p>تم تصميم وتطوير الموقع بواسطة</p>
-    <P>Design.2023D</P>
-</footer>
-
-    <script>
-        let cart = [];
-    
-        // إضافة منتج إلى السلة
-        function addToCart(productName) {
-            // إضافة المنتج إلى السلة
-            cart.push(productName);
-            updateCartDisplay();
-            alert(`${productName} تم إضافته إلى السلة.`);
-        }
-    
-        // تحديث عرض السلة
-        function updateCartDisplay() {
-            const cartItems = document.getElementById('cartItems');
-            cartItems.innerHTML = '';
-            cart.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.textContent = item;
-    
-                // إنشاء زر إزالة
-                const removeButton = document.createElement('button');
-                removeButton.textContent = 'إزالة';
-                removeButton.className = 'remove-button';
-                removeButton.onclick = function() {
-                    removeFromCart(index);
-                };
-    
-                // إضافة العناصر إلى القائمة
-                li.appendChild(removeButton);
-                cartItems.appendChild(li);
-            });
-        }
-    
-        // إزالة منتج من السلة
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartDisplay();
-        }
-    
-        // عرض نموذج الطلب
-        function showOrderForm() {
-            document.getElementById('orderForm').style.display = 'block';
-            document.getElementById('cartDetails').value = cart.join('\n');
-        }
-    
-        // إظهار/إخفاء تفاصيل التوصيل
-        function toggleDeliveryDetails() {
-            const deliveryOption = document.getElementById('deliveryOption').value;
-            const deliveryDetails = document.getElementById('deliveryDetails');
-            deliveryDetails.style.display = (deliveryOption === 'delivery') ? 'block' : 'none';
-        }
- // إرسال الطلب عبر الواتس آب
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
-    var phoneType = document.getElementById('phoneType').value || 'غير محدد';
-    var additionalNumber = document.getElementById('additionalNumber').value;
-    var deliveryOption = document.getElementById('deliveryOption').value;
-    var deliveryArea = document.getElementById('deliveryArea').value || 'غير محدد';
-    var region = document.getElementById('region').value || 'غير محدد';
-    var cartItems = cart.join(', ');
-    
-    // الحقول الجديدة
-    var messageOrSong = document.getElementById('messageOrSong').value || 'لا يوجد';
-    var specificDate = document.getElementById('specificDate').value || 'غير محدد';
-
-    var message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aنوع الهاتف: ${phoneType}%0Aرقم إضافي: ${additionalNumber}%0Aطريقة التوصيل: ${deliveryOption}%0Aمنطقة التوصيل: ${deliveryArea}%0Aاسم المنطقة: ${region}%0Aالمنتجات: ${cartItems}%0Aالعبارة أو الأغنية: ${messageOrSong}%0Aالتاريخ المطلوب: ${specificDate}`;
-    var phoneNumber = '972535845120'; // استبدل برقم هاتفك الفعلي
-    var whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
-    window.location.href = whatsappUrl;
-});
-
-
-
-    </script>
-</body>
-</html>
-
