@@ -260,15 +260,24 @@
             border-radius: 5px;
         }
 
-        /* شريط تمرير الآراء */
+      /* شريط تمرير الآراء */
+.review-slider .review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #99673e;
+}
+
+
         .review-slider .review {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 20px;
-            color: #99673e;
-        }
+                }
 
         .review-slider .rating {
             margin: 10px 0;
@@ -278,19 +287,20 @@
             font-size: 24px;
             color: gold;
         }
-
         .customer-reviews-title {
-            text-align: center;
-            font-size: 30px; /* حجم الخط أكبر */
-            color: #99673e;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
+    text-align: center;
+    font-size: 30px; /* حجم الخط أكبر */
+    color: #99673e;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
 
-        .review-slider .review p {
-            font-size: 22px; /* تكبير حجم خط المراجعات */
-            color: #99673e; /* لون بني للمراجعات */
-        }
+
+
+.review-slider .review p {
+    font-size: 22px; /* تكبير حجم خط المراجعات */
+    color: #99673e; /* لون بني للمراجعات */
+}
 
         .slick-slide {
             display: flex !important;
@@ -300,87 +310,137 @@
         .slick-dots {
             bottom: 10px;
         }
-
         /* حركة القلوب */
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-30px); /* تتحرك للأعلى */
+        opacity: 0; /* تصبح غير مرئية بالتدريج */
+    }
+}
 
-            100% {
-                transform: translateY(-30px); /* تتحرك للأعلى */
-                opacity: 0; /* تصبح غير مرئية بالتدريج */
-            }
-        }
+.heart {
+    display: inline-block;
+    font-size: 24px;
+    color: gold;
+    animation: floatUp 2s ease-in-out infinite;
+    margin-right: 5px; /* مسافة صغيرة بين القلوب */
+}
 
-        .heart {
-            display: inline-block;
-            font-size: 24px;
-            color: gold;
-            animation: floatUp 2s ease-in-out infinite;
-            margin-right: 5px; /* مسافة صغيرة بين القلوب */
-        }
+/* إضافة التأخير لكل قلب لجعل الحركة غير متزامنة */
+.heart:nth-child(1) {
+    animation-delay: 0s;
+}
+.heart:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.heart:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.heart:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.heart:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.section-separator { /*خط يفصل بين المنتج واراء الزبائن*/
+    border: none;
+    height: 2px;
+    background-color: #99673e; /* لون بني مماثل لتنسيق الموقع */
+    width: 80%;
+    margin: 30px auto; /* محاذاة إلى المنتصف وإضافة مسافة */
+}
+
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 </head>
 
 <body>
-    <header>
-        <h1>مرحبا بكم في موقعنا!</h1>
-    </header>
     <div class="hero-image">
         <img src="البدايه1.jpg" alt="صورة مقدمة">
     </div>
-    <div class="welcome">أهلاً بكم في متجرنا!</div>
-    <div class="nav">
-        <a href="#products">المنتجات</a>
-        <a href="#order">اطلب الآن</a>
-        <a href="#contact">تواصل معنا</a>
+
+    <header>
+        <div class="nav">
+            <a href="page1.html">الصفحة الرئيسية</a>
+            <a href="page2.html">كتالوج</a>
+            <a href="page3.html">كتالوج المنتجات الأخرى</a>
+        </div>
+    </header>
+
+    <div class="welcome">
+        مَتْجَري المُتَميِّزُ يُرحِّبُ بِزُوّارِه
     </div>
-    <div class="product-container" id="products">
-        <h2>المنتجات</h2>
+
+    <div class="product-container">
         <div class="circle-images">
-            <a href="https://via.placeholder.com/250">
-                <img src="صوره لكتالوج البراويز.jpg" alt="كتالوج براويز" class="product-image">
+            <a href="page2.html" title="عرض الكتالوج 1">
+                <img src="صوره لكتالوج البراويز.jpg" alt="كتالوج 1">
             </a>
-            <a href="https://via.placeholder.com/250">
-                <img src="اريج2.jpg" alt="اريج 2" class="product-image">
-            </a>
-            <a href="https://via.placeholder.com/250">
-                <img src="صندوق واخيرا تجمعنا.jpg" alt="صندوق تجمعنا" class="product-image">
+            <a href="page3.html" title="عرض الكتالوج 2">
+                <img src="اريج2.jpg" alt="كتالوج 2">
             </a>
         </div>
-    </div>
-    <div class="order-form" id="order">
-        <h2>نموذج الطلب</h2>
-        <input type="text" placeholder="الاسم الكامل" required>
-        <input type="email" placeholder="البريد الإلكتروني" required>
-        <textarea placeholder="ملاحظات إضافية"></textarea>
-        <div class="order-button-container">
-            <button class="show-order-form">عرض نموذج الطلب</button>
+
+        <div class="product-box">
+            <div class="product-image-container">
+                <img src="صندوق واخيرا تجمعنا.jpg" alt="صندوق وأخيرًا تجمّعنا" class="product-image">
+            </div>
+            <div class="order-button-container">
+                <button class="show-order-form" onclick="toggleOrderForm()">أطلب الآن</button>
+            </div>
+            <div class="order-form" id="orderForm">
+                <p id="productDescription">صندوق وأخيرًا تجمّعنا.</p>
+                
+                <h3>يشمل 8 العاب</h3>
+                <p id="productPrice">السعر: 220</p>
+            
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" required>
+                
+                <label for="phone">رقم الهاتف:</label>
+                <input type="tel" id="phone" required>
+                
+                <label for="additionalNumber">رقم إضافي:</label>
+                <input type="tel" id="additionalNumber">
+                
+                <label for="deliveryOption">اختر طريقة التوصيل:</label>
+                <select id="deliveryOption" onchange="toggleDeliveryDetails()" required>
+                    <option value="" disabled selected>اختر طريقة التوصيل</option>
+                    <option value="delivery">توصيل</option>
+                    <option value="pickup">استلام شخصي</option>
+                </select>
+                
+                <div id="deliveryDetails" style="display: none;">
+                    <label for="deliveryArea">اختر المنطقة:</label>
+                    <select id="deliveryArea">
+                        <option value="north">الشمال - 50₪</option>
+                        <option value="south">الجنوب - 60₪</option>
+                        <option value="triangle">المثلث - 40₪</option>
+                    </select>
+                    <label for="region">اسم المنطقة:</label>
+                    <input type="text" id="region">
+                </div>
+                
+                <button class="submit-button" onclick="sendWhatsApp()">إرسال الطلب</button>
+            </div>
+            
         </div>
-        <div class="order-form" id="order-form">
-            <button class="submit-button">إرسال الطلب</button>
-        </div>
     </div>
-    <div class="highlight-box">
-        <p>تسوق الآن واحصل على خصم خاص!</p>
-    </div>
-    <div class="social-media">
-        <h3>تابعنا على وسائل التواصل الاجتماعي!</h3>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-    <div class="policy">
-        <h2>سياسة الطلب</h2>
-        <p>يتم معالجة الطلبات خلال 3 أيام عمل.</p>
-    </div>
-    <div class="customer-reviews">
-        <h2 class="customer-reviews-title">آراء العملاء</h2>
+    <hr class="section-separator">
+    <div class="customer-reviews-section">
+        <h2 class="customer-reviews-title">"آرَاءُ زَبَائِنِي تَعْكِسُ جَوْدَةَ مُنْتَجَاتِي وَتَمَيُّزِي.
+             أَسْعَدُ دَائِمًا بِمُلَاحَظَاتِكُمْ 
+             لِأَنَّهَا تُسَاعِدُنِي عَلَى تَقْدِيمِ الْأَفْضَلِ لَكُمْ!" مَتْجَرُ الأَرِيجِ الْمُتمَيَّزِ.
+            
+            </h2>
         <div class="review-slider">
             <div class="review">
-                <p>منتج ممتاز! أنصح به.</p>
+                <p>عنجد كان اختيار موفق واكثر من رائع انو روان دلتني على هيك صبيه لان المعامله اهم من الشغل نفسو ولله❤❤</p>
                 <div class="rating">
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
@@ -390,23 +450,87 @@
                 </div>
             </div>
             <div class="review">
-                <p>خدمة العملاء رائعة، شكراً لكم!</p>
-                <div class="rating">
+<P>يعطيكي العافيه حبيبتي هسا تا فضيت اكتبلك
+    يسلم ايديكي عنجد بجنن🫶🏻 كثير كثير حلوات اول مره بتعامل معك بس مش اخر مره</P>                <div class="rating">
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                 </div>
-            </div>
+                </div>
+
+                <div class="review">
+                    <p>"حبيبتي ، طلبت من عندك قبل المره رسمه لصحبيتي وعنجد كانت ككثير ككثييرر بتسطللل كل مره بطلب بتبهريني بجمال شغلك😍😍"</p>
+                    <div class="rating">
+                        <span class="heart">❤️</span>
+                        <span class="heart">❤️</span>
+                        <span class="heart">❤️</span>
+                        <span class="heart">❤️</span>
+                        <span class="heart">❤️</span>
+                    </div>
+                </div>
         </div>
     </div>
+    
+
+    <div class="social-media">
+        <a href="https://www.instagram.com/art._.by_areej?igsh=YWd3N3FtcTdiNWYz" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/972535845120" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <div class="policy">
+        <h2>سياسة الطلب وعدم إلغاء الطلبيات بعد تجهيزها </h2>
+        <p>⚠️ **تنبيه هام**: لا يمكن إلغاء الطّلبيّات بعد تأكيدها. نشكركم لتفهّمكم ونتطلّع لخدمتكم بكلّ سرور.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        document.querySelector('.show-order-form').addEventListener('click', function () {
-            const orderForm = document.getElementById('order-form');
-            orderForm.style.display = orderForm.style.display === 'block' ? 'none' : 'block';
+        $(document).ready(function(){
+            $('.review-slider').slick({
+                autoplay: true,
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
         });
+
+        function toggleDeliveryDetails() {
+            const deliveryOption = document.getElementById('deliveryOption').value;
+            const deliveryDetails = document.getElementById('deliveryDetails');
+            deliveryDetails.style.display = (deliveryOption === 'delivery') ? 'block' : 'none';
+        }
+
+        function toggleOrderForm() {
+            const orderForm = document.getElementById('orderForm');
+            orderForm.style.display = orderForm.style.display === 'none' || orderForm.style.display === '' ? 'block' : 'none';
+        }
+
+        function sendWhatsApp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const additionalNumber = document.getElementById('additionalNumber').value;
+            const deliveryOption = document.getElementById('deliveryOption').value;
+            const deliveryArea = document.getElementById('deliveryArea') ? document.getElementById('deliveryArea').value : 'غير محدد';
+            const region = document.getElementById('region').value || 'غير محدد';
+
+            const message = `طلب جديد%0Aالاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aرقم إضافي: ${additionalNumber}%0Aطريقة التوصيل: ${deliveryOption}%0Aمنطقة التوصيل: ${deliveryArea}%0Aاسم المنطقة: ${region}`;
+            const phoneNumber = '972535845120'; // استبدل برقم هاتفك الفعلي
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            window.location.href = whatsappUrl;
+        }
     </script>
+    <footer style="background-color: #fffefd; padding: 20px; text-align: center; color: #99673e;">
+        <p>© 2024 جميع الحقوق محفوظة - Art By Areej </p>
+        <p>تم تصميم وتطوير الموقع بواسطة</p>
+        <P>Design.2023D</P>
+    </footer>
+    
 </body>
 
 </html>
