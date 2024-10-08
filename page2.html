@@ -37,7 +37,7 @@ header {
     padding: 15px;
     border-radius: 5px;
     margin: 20px auto;
-    width: 80%;
+    width: 50%;
     text-align: center;
     font-size: 18px;
     color: #6b4f3b; /* لون بني داكن */
@@ -93,7 +93,7 @@ header {
     border: 1px solid #eccdb1; /* إطار بلون بني داكن */
 }
 .product img {
-    width: 50%;
+    width: 100%;
     height: auto;
     border: 5px solid #eccdb1; /* إطار بلون ترابي فاتح */
     box-shadow: 0 4px 8px rgb(255, 255, 255);
@@ -219,6 +219,19 @@ footer {
     background-color: #fffff6b4f3bf; /* لون ترابي فاتح */
 }
 
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 40px); /* Two per row on medium screens */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%; /* One per row on small screens */
+        max-width: 100%;
+    }
+}
     </style>
 </head>
 <body>
